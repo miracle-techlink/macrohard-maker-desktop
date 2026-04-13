@@ -138,7 +138,7 @@ function createMainWindow() {
     width: 1440, height: 900,
     minWidth: 1024, minHeight: 680,
     show: false,
-    title: 'CF-Path-Planner',
+    title: 'MacroHard Maker',
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,

@@ -1,4 +1,4 @@
-# CF-Path-Planner Desktop
+# MacroHard Maker
 
 连续碳纤维3D打印路径规划软件 — 桌面版
 
@@ -24,15 +24,15 @@
 
 | 平台 | 文件 |
 |------|------|
-| Linux x64 | `CF-Path-Planner-x.x.x.AppImage` |
+| Linux x64 | `MacroHard-Maker-x.x.x.AppImage` |
 
 ## 使用方法
 
 ### Linux
 
 ```bash
-chmod +x CF-Path-Planner-*.AppImage
-./CF-Path-Planner-*.AppImage
+chmod +x MacroHard-Maker-*.AppImage
+./MacroHard-Maker-*.AppImage
 ```
 
 **首次运行**：程序会自动检测并安装 Python 依赖（fastapi、uvicorn、numpy、scipy、meshio、scikit-fem、gmsh），约需 3-5 分钟，之后启动速度正常。
@@ -75,7 +75,7 @@ python webapp/run.py --port 8080
 
 ```bash
 npm run build:linux
-# 输出到 release/CF-Path-Planner-*.AppImage
+# 输出到 release/MacroHard-Maker-*.AppImage
 ```
 
 ## 项目结构
@@ -85,6 +85,7 @@ cf-path-planner-desktop/
 ├── main.js          # Electron 主进程，管理 Python server 生命周期
 ├── preload.js       # contextBridge 安全桥接
 ├── splash.html      # 启动加载界面
+├── icons/           # 应用图标
 ├── package.json     # electron-builder 打包配置
 └── .github/
     └── workflows/
