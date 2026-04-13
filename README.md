@@ -9,11 +9,14 @@
 
 ## 功能
 
+- **XY+A combined 路径规划** — 缠绕层 + 填充层一体化，1.7M 路径点 / 3.4s
+- **G-code 生成（16× 提速）** — 直接字符串格式化，22.5s → 1.35s，输出 75MB G-code
+- **30 个内置模型库** — OCC 精确几何生成（空心管、T 形三通、翼梁、涡轮叶片等）
 - **FEA 应力分析** — 基于 scikit-fem 的有限元分析，识别主应力方向
-- **测地线路径规划** — 沿曲面最短路径铺设碳纤维
-- **XY+A 多轴路径生成** — 适配四轴打印头的路径优化
-- **G-code 导出** — 直接输出可用于 Snapmaker/自定义多轴打印机的 G-code
-- **Three.js 3D 可视化** — 实时预览网格、应力场与纤维路径
+- **打印方向优化** — X/Y/Z 三轴旋转滑块 + 64 方向自动搜索
+- **支撑预览** — 悬垂角检测，柱状 / 树状双模式
+- **后端日志面板** — 实时 500 条环形缓冲，可拖拽，带复制 / 清空反馈
+- **Three.js 3D 可视化** — 实时路径预览，1342 可视层段，层切片滑块
 
 ## 截图
 
@@ -85,8 +88,9 @@ Python 后端源码：[cf-path-planner-viz-](https://github.com/miracle-techlink
 
 ## 技术栈
 
-- **前端**：Three.js · HTML/CSS/JS（内嵌于 Python 后端）
-- **后端**：Python · scikit-fem · gmsh · scipy · meshio
+- **前端**：Three.js · HTML/CSS/JS（内嵌于 Python 后端，Luban 风格浅色主题）
+- **后端**：Python · scikit-fem · gmsh · scipy · meshio · python-occ
+- **G-code**：直接字符串格式化（绕过 FullControl，16× 加速）
 - **桌面**：Electron 36 · electron-builder
 - **CI/CD**：GitHub Actions → AppImage → GitHub Releases
 
