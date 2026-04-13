@@ -46,6 +46,7 @@
     "linux": {
       "target": [{ "target": "AppImage", "arch": ["x64"] }],
       "icon": "icons/",
+      "artifactName": "MacroHard-Maker-v${version}-linux-x64.${ext}",
       "category": "Engineering",
       "synopsis": "连续碳纤维3D打印路径规划",
       "description": "Stress-driven continuous carbon fiber path planning for multi-axis 3D printing"
@@ -55,6 +56,7 @@
         { "target": "dmg", "arch": ["x64", "arm64"] }
       ],
       "icon": "icons/icon.iconset",
+      "artifactName": "MacroHard-Maker-v${version}-mac-${arch}.${ext}",
       "category": "public.app-category.developer-tools"
     },
     "dmg": {
@@ -66,7 +68,8 @@
     },
     "win": {
       "target": [{ "target": "nsis", "arch": ["x64"] }],
-      "icon": "icons/icon.ico"
+      "icon": "icons/icon.ico",
+      "artifactName": "MacroHard-Maker-v${version}-win-x64-Setup.${ext}"
     },
     "nsis": {
       "oneClick": false,
