@@ -2,7 +2,7 @@
 
 连续碳纤维3D打印路径规划软件 — 桌面版
 
-[![Release](https://img.shields.io/github/v/release/miracle-techlink/cf-path-planner-desktop)](https://github.com/miracle-techlink/cf-path-planner-desktop/releases/latest)
+[![Release](https://img.shields.io/github/v/release/miracle-techlink/macrohard-maker-desktop)](https://github.com/miracle-techlink/macrohard-maker-desktop/releases/latest)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 ---
@@ -20,7 +20,7 @@
 
 ## 下载
 
-前往 [Releases](https://github.com/miracle-techlink/cf-path-planner-desktop/releases/latest) 下载最新版本：
+前往 [Releases](https://github.com/miracle-techlink/macrohard-maker-desktop/releases/latest) 下载最新版本：
 
 | 平台 | 文件 |
 |------|------|
@@ -46,11 +46,11 @@ chmod +x MacroHard-Maker-*.AppImage
 
 ```bash
 # 克隆桌面壳
-git clone https://github.com/miracle-techlink/cf-path-planner-desktop.git
-cd cf-path-planner-desktop
+git clone https://github.com/miracle-techlink/macrohard-maker-desktop.git
+cd macrohard-maker-desktop
 
 # 克隆 Python 后端（放在指定位置）
-git clone https://github.com/miracle-techlink/cf-path-planner-viz-.git \
+git clone https://github.com/miracle-techlink/macrohard-maker-core.git \
   ../连续碳纤维3D打印/cf-path-planner
 
 # 安装 Python 依赖
@@ -81,7 +81,7 @@ npm run build:linux
 ## 项目结构
 
 ```
-cf-path-planner-desktop/
+macrohard-maker-desktop/
 ├── main.js          # Electron 主进程，管理 Python server 生命周期
 ├── preload.js       # contextBridge 安全桥接
 ├── splash.html      # 启动加载界面
@@ -92,7 +92,7 @@ cf-path-planner-desktop/
         └── release.yml  # 推 tag 自动构建发布
 ```
 
-Python 后端源码：[cf-path-planner-viz-](https://github.com/miracle-techlink/cf-path-planner-viz-)
+Python 后端源码：[macrohard-maker-core](https://github.com/miracle-techlink/macrohard-maker-core)
 
 ## 技术栈
 

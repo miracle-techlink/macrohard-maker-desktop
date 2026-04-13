@@ -23,7 +23,7 @@ jobs:
       - name: Checkout cf-path-planner backend
         uses: actions/checkout@v4
         with:
-          repository: miracle-techlink/cf-path-planner-viz-
+          repository: miracle-techlink/macrohard-maker-core
           path: cf-path-planner-src
 
       - name: Setup Node.js
