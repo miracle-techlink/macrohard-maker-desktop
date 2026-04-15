@@ -1,6 +1,6 @@
 {
   "name": "macrohard-maker",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "连续碳纤维3D打印路径规划软件",
   "main": "main.js",
   "scripts": {
@@ -25,7 +25,7 @@
     ],
     "extraResources": [
       {
-        "from": "../连续碳纤维3D打印/cf-path-planner",
+        "from": "../cf-path-planner",
         "to": "cf-path-planner",
         "filter": [
           "**/*",
@@ -39,7 +39,10 @@
           "!**/docs/*.aux",
           "!**/docs/*.log",
           "!**/docs/*.toc",
-          "!**/.DS_Store"
+          "!**/.DS_Store",
+          "!**/squashfs-root/**",
+          "!**/visualization/data/**",
+          "!**/gh-pages/**"
         ]
       }
     ],
