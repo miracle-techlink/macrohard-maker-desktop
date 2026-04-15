@@ -1,6 +1,6 @@
 {
   "name": "macrohard-maker",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "连续碳纤维3D打印路径规划软件",
   "main": "main.js",
   "scripts": {
@@ -25,25 +25,28 @@
     ],
     "extraResources": [
       {
-        "from": "../cf-path-planner",
-        "to": "cf-path-planner",
-        "filter": [
-          "**/*",
-          "!**/__pycache__/**",
-          "!**/*.pyc",
-          "!**/*.pyo",
-          "!**/.git/**",
-          "!**/node_modules/**",
-          "!**/examples/*/output*/**",
-          "!**/tests/output/**",
-          "!**/docs/*.aux",
-          "!**/docs/*.log",
-          "!**/docs/*.toc",
-          "!**/.DS_Store",
-          "!**/squashfs-root/**",
-          "!**/visualization/data/**",
-          "!**/gh-pages/**"
-        ]
+        "from": "../cf-path-planner/cfpp",
+        "to": "cf-path-planner/cfpp",
+        "filter": ["**/*", "!**/__pycache__/**", "!**/*.pyc", "!**/*.pyo"]
+      },
+      {
+        "from": "../cf-path-planner/webapp",
+        "to": "cf-path-planner/webapp",
+        "filter": ["**/*", "!**/__pycache__/**", "!**/*.pyc", "!**/*.pyo"]
+      },
+      {
+        "from": "../cf-path-planner/visualization",
+        "to": "cf-path-planner/visualization",
+        "filter": ["**/*", "!data/**"]
+      },
+      {
+        "from": "../cf-path-planner/klipper",
+        "to": "cf-path-planner/klipper",
+        "filter": ["**/*"]
+      },
+      {
+        "from": "../cf-path-planner/README.md",
+        "to": "cf-path-planner/README.md"
       }
     ],
     "linux": {
